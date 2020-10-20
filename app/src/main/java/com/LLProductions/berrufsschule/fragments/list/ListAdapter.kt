@@ -24,6 +24,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.tv_FirstName.text = currentItem.firstName
         holder.itemView.tv_LastName.text = currentItem.lastName
         holder.itemView.tv_Age.text = currentItem.age.toString()
+
+        holder.itemView.rowLayout.setOnClickListener {
+            val action = ListFragmentDirections
+        }
+
     }
 
     override fun getItemCount(): Int {
