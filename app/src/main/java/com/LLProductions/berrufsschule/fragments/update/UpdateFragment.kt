@@ -29,7 +29,7 @@ class UpdateFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_update, container, false)
 
-        val mUserViewModel= ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel= ViewModelProvider(this).get(UserViewModel::class.java)
 
         view.et_updateFirstName.setText(args.currentUser.firstName)
         view.et_updateLastName.setText(args.currentUser.lastName)
@@ -37,7 +37,7 @@ class UpdateFragment : Fragment() {
 
 
         view.btnUpdate.setOnClickListener {
-
+        updateItem()
         }
 
         return view
