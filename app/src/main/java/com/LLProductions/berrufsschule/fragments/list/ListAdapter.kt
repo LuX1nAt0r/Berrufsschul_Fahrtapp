@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.LLProductions.berrufsschule.R
 import com.LLProductions.berrufsschule.model.User
 import kotlinx.android.synthetic.main.custom_row.view.*
@@ -26,7 +27,8 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.tv_Age.text = currentItem.age.toString()
 
         holder.itemView.rowLayout.setOnClickListener {
-            val action = ListFragmentDirections
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
         }
 
     }
