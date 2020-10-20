@@ -12,11 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
 import com.LLProductions.berrufsschule.R
-import com.LLProductions.berrufsschule.data.User
-import com.LLProductions.berrufsschule.data.UserViewModel
+import com.LLProductions.berrufsschule.model.User
+import com.LLProductions.berrufsschule.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
-import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
 class AddFragment : Fragment() {

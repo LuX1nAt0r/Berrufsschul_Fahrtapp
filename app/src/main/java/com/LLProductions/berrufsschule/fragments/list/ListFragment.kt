@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.LLProductions.berrufsschule.R
-import com.LLProductions.berrufsschule.data.UserViewModel
+import com.LLProductions.berrufsschule.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 

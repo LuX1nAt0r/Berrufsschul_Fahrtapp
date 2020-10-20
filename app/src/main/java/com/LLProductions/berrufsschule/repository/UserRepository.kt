@@ -1,6 +1,8 @@
-package com.LLProductions.berrufsschule.data
+package com.LLProductions.berrufsschule.repository
 
 import androidx.lifecycle.LiveData
+import com.LLProductions.berrufsschule.data.UserDao
+import com.LLProductions.berrufsschule.model.User
 
 class UserRepository(private val userDao: UserDao) {
 

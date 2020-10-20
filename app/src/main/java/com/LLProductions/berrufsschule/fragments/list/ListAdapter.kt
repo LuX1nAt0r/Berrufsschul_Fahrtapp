@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.LLProductions.berrufsschule.R
-import com.LLProductions.berrufsschule.data.User
+import com.LLProductions.berrufsschule.model.User
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {

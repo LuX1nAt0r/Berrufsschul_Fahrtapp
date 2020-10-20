@@ -1,4 +1,4 @@
-package com.LLProductions.berrufsschule.data
+package com.LLProductions.berrufsschule.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
