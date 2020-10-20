@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -52,8 +53,11 @@ class UpdateFragment : Fragment() {
             val updateUser = User(args.currentUser.id, firstName, lastName, age)
             //Update Current User
             mUserViewModel.updateUser(updateUser)
+            Toast.makeText(requireContext(), "Updated Successfully",Toast.LENGTH_SHORT).show()
             //Navigate Back
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+        }else{
+            Toast.makeText(requireContext(),"Please fill out all fields", Toast.LENGTH_SHORT).show()
         }
     }
 
