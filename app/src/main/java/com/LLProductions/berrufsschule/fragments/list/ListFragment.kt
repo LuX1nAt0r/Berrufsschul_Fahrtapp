@@ -75,11 +75,21 @@ class ListFragment : Fragment() {
                 recyclerView.layoutManager= LinearLayoutManager(requireContext())
                 adapter.setData(user)
             })
-            //mUserViewModel.readAllData_abc()
+
 
 
         }
-       // if(item.itemId == R.id.menu_sort_age){ }
+        if(item.itemId == R.id.menu_sort_age){
+            mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer {user ->
+                val adapter = ListAdapter()
+                val recyclerView = recyclerview
+                recyclerView.adapter = adapter
+                recyclerView.layoutManager= LinearLayoutManager(requireContext())
+                adapter.setData(user)
+            })
+
+
+        }
 
         return super.onOptionsItemSelected(item)
     }
