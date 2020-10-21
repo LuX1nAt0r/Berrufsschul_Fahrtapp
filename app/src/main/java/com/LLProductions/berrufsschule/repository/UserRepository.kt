@@ -7,6 +7,7 @@ import com.LLProductions.berrufsschule.model.User
 class UserRepository(private val userDao: UserDao) {
 
     val readAllData: LiveData<List<User>> = userDao.readAllData()
+    val readAllData_abc: LiveData<List<User>> = userDao.readAllData_abc()
 
     suspend fun addUser(user: User){
         userDao.addUser(user)
@@ -23,4 +24,6 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun deleteAllUsers(){
         userDao.deleteAllUsers()
     }
+
+
 }

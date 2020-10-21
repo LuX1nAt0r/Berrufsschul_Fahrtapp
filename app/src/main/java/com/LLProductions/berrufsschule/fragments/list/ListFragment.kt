@@ -10,8 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.SortedList
 import com.LLProductions.berrufsschule.R
 import com.LLProductions.berrufsschule.viewmodel.UserViewModel
+import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
@@ -49,6 +51,11 @@ class ListFragment : Fragment() {
 
     }
 
+    fun sortbyabc(){
+
+
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.list_menu, menu)
@@ -58,6 +65,21 @@ class ListFragment : Fragment() {
         if(item.itemId == R.id.menu_delete){
             deleteAllUsers()
         }
+        if(item.itemId == R.id.menu_sort_abc){
+            Toast.makeText(requireContext(),"Test",Toast.LENGTH_SHORT).show()
+            //val adapter = ListAdapter()
+            mUserViewModel.readAllDataABC.observe(viewLifecycleOwner, Observer {user ->
+                val adapter = ListAdapter()
+                val recyclerView = recyclerview
+                recyclerView.adapter = adapter
+                recyclerView.layoutManager= LinearLayoutManager(requireContext())
+                adapter.setData(user)
+            })
+            //mUserViewModel.readAllData_abc()
+
+
+        }
+       // if(item.itemId == R.id.menu_sort_age){ }
 
         return super.onOptionsItemSelected(item)
     }
