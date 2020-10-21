@@ -2,38 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <item
+        android:icon="@drawable/ic_sort"
+        android:iconTint="@android:color/white"
+        android:title="Sort by"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/menu_sort_abc"
+                android:title="Abc" />
+
+            <item
+                android:id="@+id/menu_sort_age"
+                android:title="Age" />
+
+        </menu>
+
+    </item>
     <item
         android:id="@+id/menu_delete"
         android:icon="@drawable/ic_delete"
         android:iconTint="@android:color/white"
         android:title="Delete"
         app:showAsAction="ifRoom" />
-
-
-    <item
-        android:title="Sort by"
-        android:iconTint="@android:color/white"
-        android:icon="@drawable/ic_sort"
-        app:showAsAction="ifRoom">
-
-        <menu>
-            <item android:id="@+id/menu_sort_abc"
-                android:title="Abc"/>
-
-            <item android:id="@+id/menu_sort_age"
-                android:title="Age"/>
-
-
-
-
-        </menu>
-
-
-
-
-    </item>
-
-
 
 </menu>
 
